@@ -11,8 +11,8 @@ import Colors from '../styles/colors';
 import { globals } from '../styles';
 
 class Landing extends Component{
-  constructor(props) {
-    super(props);
+  constructor(){
+    super();
     this.visitDashboard = this.visitDashboard.bind(this);
   }
   visitDashboard(){
@@ -22,16 +22,15 @@ class Landing extends Component{
   }
   render(){
     let titleConfig = { title: 'Landing', tintColor: 'white' };
-
     return (
       <View style={globals.flexContainer}>
         <NavigationBar
           title={titleConfig}
           tintColor={Colors.brandPrimary}
         />
-        <View style={globals.flexContainer}>
-          <Text style={globals.h2}
-            This is a Landing Page
+        <View style={globals.flexCenter}>
+          <Text style={globals.h2}>
+            This is the Landing Page
           </Text>
           <TouchableOpacity onPress={this.visitDashboard}>
             <Text>Go to the Dashboard</Text>

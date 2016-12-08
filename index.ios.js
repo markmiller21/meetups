@@ -6,7 +6,7 @@ import {
 
 import Landing from './application/components/Landing';
 
-class assemblies extends Component {
+class meetups extends Component {
   render() {
     return (
       <Landing />
@@ -14,4 +14,4 @@ class assemblies extends Component {
   }
 }
 
-AppRegistry.registerComponent('assemblies', () => assemblies);
+AppRegistry.registerComponent('meetups', () => meetups);
