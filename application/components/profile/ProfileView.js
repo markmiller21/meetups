@@ -16,7 +16,7 @@ const styles = profileStyles;
 
 class ProfileView extends Component{
   render() {
-    let titleConfig = { title: 'Profile', tintColor: 'white' };
+    let { currentUser } = this.props;
     return (
       <View style={[globals.flexContainer, globals.inactive]}>
         <NavigationBar

@@ -11,35 +11,36 @@ class Dashboard extends Component{
     super();
     this.state = {
       selectedTab: 'Activity'
-    }
+    };
   }
   render(){
+    let { user } = this.props;
     return (
       <TabBarIOS>
-        <Icon.TabBarItemIOS
+        <TabBarItemIOS
           title='Activity'
           selected={this.state.selectedTab === 'Activity'}
           iconName='ios-pulse'
           onPress={() => this.setState({ selectedTab: 'Activity' })}
         >
-          <ActivityView />
-        </Icon.TabBarItemIOS>
-        <Icon.TabBarItemIOS
+          <ActivityView currentUser={user}/>
+        </TabBarItemIOS>
+        <TabBarItemIOS
           title='Messages'
           selected={this.state.selectedTab === 'Messages'}
           iconName='ios-chatboxes'
           onPress={() => this.setState({ selectedTab: 'Messages' })}
         >
-          <MessagesView />
-        </Icon.TabBarItemIOS>
-        <Icon.TabBarItemIOS
+          <MessagesView currentUser={user}/>
+        </TabBarItemIOS>
+        <TabBarItemIOS
           title='Profile'
           selected={this.state.selectedTab === 'Profile'}
           iconName='ios-person'
           onPress={() => this.setState({ selectedTab: 'Profile' })}
         >
-          <ProfileView />
-        </Icon.TabBarItemIOS>
+          <ProfileView currentUser={user}/>
+        </TabBarItemIOS>
       </TabBarIOS>
     )
   }

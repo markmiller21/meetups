@@ -1,5 +1,22 @@
 import { flatten } from 'underscore';
 
+export const SolidColors = [
+  'red',
+  'deepPurple',
+  'indigo',
+  'teal',
+  'orange',
+  'blueGrey',
+  'purple',
+  'green',
+];
+
+export const BackgroundImage = 'https://s3-us-west-2.amazonaws.com/assembliesapp/welcome%402x.png';
+
+export const Headers = {
+  'Content-Type': 'application/json'
+};
+
 export const DefaultAvatar = 'https://confluence.slac.stanford.edu/s/en_GB/5996/4a6343ec7ed8542179d6c78fa7f87c01f81da016.20/_/images/icons/profilepics/default.png';
 export const ReactLogo = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/React.js_logo.svg/2000px-React.js_logo.svg.png';
 export const Technologies = [
@@ -52,7 +69,6 @@ export const FakeMessages = [
 ];
 
 export const currentUser = {
-  description: 'React Native enables you to build world-class application experiences on native platforms using a consistent developer experience based on JavaScript and React. The focus of React Native is on developer efficiency across all the platforms you care about — learn once, write anywhere. Facebook uses React Native in multiple production apps and will continue investing in React Native.',
   firstName: 'Example',
   lastName: 'Account',
   avatar: ReactLogo,
@@ -60,25 +76,25 @@ export const currentUser = {
   username: 'example@example.com',
   id: 6,
   location : {
-  	lat: 40.7127837,
-  	lng: -74.0059413,
-  	city: {
-  		long_name: "New York",
-  		short_name: "New York",
-  		types: [
-  			"locality",
-  			"political"
-  		]
-  	},
-  	state: {
-  		long_name: "New York",
-  		short_name: "NY",
-  		types: [
-  			"administrative_area_level_1",
-  			"political"
-  		]
-  	},
-  	formattedAddress: "New York, NY, USA"
+    "lat": 40.7127837,
+    "lng": -74.0059413,
+    "city": {
+      "long_name": "New York",
+      "short_name": "New York",
+      "types": [
+        "locality",
+        "political"
+      ]
+    },
+    "state": {
+      "long_name": "New York",
+      "short_name": "NY",
+      "types": [
+        "administrative_area_level_1",
+        "political"
+      ]
+    },
+    "formattedAddress": "New York, NY, USA"
   }
 };
 
@@ -108,11 +124,11 @@ export const FakeConversations = FakeUsers.map((user, idx) => ({
 }));
 
 export const FakeNotifications = [
-  {time: randomDate().valueOf(), message: 'new message from Kanye', type: 'Message', seen: false,},
-  {time: randomDate().valueOf(), message: 'comment in React Native NYC', type: 'Event', seen: false,},
-  {time: randomDate().valueOf(), message: 'new members in React Native NYC', type: 'Group', seen: false,},
-  {time: randomDate().valueOf(), message: 'new message from Nick', type: 'Message', seen: false,},
-  {time: randomDate().valueOf(), message: 'new event in JavaScript', type: 'Event', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'new message from Kanye', type: 'Message', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'comment in React Native NYC', type: 'Event', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'new members in React Native NYC', type: 'Group', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'new message from Nick', type: 'Message', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'new event in JavaScript', type: 'Event', seen: false,},
 ]
 
 
@@ -146,11 +162,6 @@ export const upcomingEvent = {
   capacity: 100,
   groupId: 1,
 };
-
-
-
-
-
 
 export const ImageOptions = {
   title: 'Select Avatar',
